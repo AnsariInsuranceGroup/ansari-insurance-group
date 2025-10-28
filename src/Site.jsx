@@ -27,7 +27,6 @@ export default function Site() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Background Gradient + Shape */}
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-50 via-indigo-100 to-blue-50" />
         <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-b from-indigo-200/60 to-indigo-50 clip-path-[polygon(30%_0,100%_0,100%_100%,0_100%)] hidden md:block" />
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
@@ -48,7 +47,6 @@ export default function Site() {
             </div>
           </div>
 
-          {/* Visual Side Graphic */}
           <div className="relative hidden md:flex items-center justify-center">
             <div className="relative w-full max-w-md rounded-3xl shadow-lg overflow-hidden ring-1 ring-slate-200">
               <img
@@ -67,24 +65,27 @@ export default function Site() {
       </section>
 
       {/* Services */}
-    <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  {[
-    "Medicare Advantage (Part C)",
-    "Medicare Supplement (Medigap)",
-    "Prescription Drug Plans (Part D)",
-    "Life Insurance",
-    "Annuities",
-    "Health, Dental & Vision"
-  ].map((item, i) => (
-    <li
-      key={i}
-      className="rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition bg-gradient-to-br from-white to-indigo-50/30"
-    >
-      {item}
-    </li>
-  ))}
-</ul>
-
+      <section id="services" className="mx-auto max-w-6xl px-4 py-20 bg-white">
+        <h2 className="text-3xl font-semibold mb-4 text-center text-indigo-700 border-b-2 border-indigo-200 inline-block">Our Services</h2>
+        <p className="text-slate-600 mb-8 text-center max-w-2xl mx-auto">Comprehensive coverage options focusing on Medicare Advantage and more.</p>
+        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            "Medicare Advantage (Part C)",
+            "Medicare Supplement (Medigap)",
+            "Prescription Drug Plans (Part D)",
+            "Life Insurance",
+            "Annuities",
+            "Health, Dental & Vision"
+          ].map((item, i) => (
+            <li
+              key={i}
+              className="rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition bg-gradient-to-br from-white to-indigo-50/30"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {/* Booking and Lead Form */}
       <section id="book" className="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 py-20 border-t border-slate-200">
@@ -102,8 +103,8 @@ export default function Site() {
               onSubmit={(e) => {
                 e.preventDefault();
                 const data = new FormData(e.currentTarget);
-                const body = `Lead from website\\n\\nName: ${'${'}data.get('name'){'}'}\\nPhone: ${'${'}data.get('phone'){'}'}\\nEmail: ${'${'}data.get('email'){'}'}\\nZIP: ${'${'}data.get('zip'){'}'}\\nNotes: ${'${'}data.get('notes'){'}'}`;
-                window.location.href = `mailto:info@ansariinsurancegroup.com?subject=${'${'}encodeURIComponent('New Lead — Ansari Insurance Group'){'}'}&body=${'${'}encodeURIComponent(body){'}'}`;
+                const body = `Lead from website\n\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nZIP: ${data.get("zip")}\nNotes: ${data.get("notes")}`;
+                window.location.href = `mailto:ansari.mgis@gmail.com?subject=${encodeURIComponent("New Lead — Ansari Insurance Group")}&body=${encodeURIComponent(body)}`;
               }}
             >
               <input name="name" required placeholder="Full Name" className="rounded-lg border border-slate-300 px-3 py-2 text-sm" />
@@ -121,21 +122,29 @@ export default function Site() {
       <section id="faq" className="max-w-6xl mx-auto px-4 py-20">
         <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700 border-b-2 border-indigo-200 inline-block">Frequently Asked Questions</h2>
         <div className="mt-8 grid md:grid-cols-2 gap-6">
-          {[{
-            q: 'What is Medicare Advantage?',
-            a: 'It combines Part A and Part B, often including drug coverage and extras like dental or vision.'
-          },{
-            q: 'Do you charge for help?',
-            a: 'No, consultations are free; carriers pay us if you enroll.'
-          },{
-            q: 'Can I keep my doctors?',
-            a: 'We check your plan’s network and confirm your providers.'
-          },{
-            q: 'What states do you serve?',
-            a: 'We are licensed in Oregon, Washington (including Vancouver), Arizona, and California.'
-          }].map((f, i) => (
+          {[
+            {
+              q: "What is Medicare Advantage?",
+              a: "It combines Part A and Part B, often including drug coverage and extras like dental or vision."
+            },
+            {
+              q: "Do you charge for help?",
+              a: "No, consultations are free; carriers pay us if you enroll."
+            },
+            {
+              q: "Can I keep my doctors?",
+              a: "We check your plan’s network and confirm your providers."
+            },
+            {
+              q: "What states do you serve?",
+              a: "We are licensed in Oregon, Washington (including Vancouver), Arizona, and California."
+            }
+          ].map((f, i) => (
             <details key={i} className="group bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
-              <summary className="cursor-pointer select-none px-5 py-4 font-medium text-slate-800 flex justify-between items-center">{f.q}<span className="text-indigo-600">▾</span></summary>
+              <summary className="cursor-pointer select-none px-5 py-4 font-medium text-slate-800 flex justify-between items-center">
+                {f.q}
+                <span className="text-indigo-600">▾</span>
+              </summary>
               <div className="bg-indigo-50 px-5 py-4 text-sm text-slate-600">{f.a}</div>
             </details>
           ))}
@@ -146,18 +155,24 @@ export default function Site() {
       <footer className="bg-gradient-to-r from-indigo-700 to-indigo-600 text-white py-10 text-sm text-center">
         <div>© {new Date().getFullYear()} Ansari Insurance Group — Licensed in OR, WA, AZ, and CA.</div>
         <div className="text-xs mt-2 max-w-3xl mx-auto opacity-90">
-          We do not offer every plan available in your area. Any information we provide is limited to the plans we do offer in your area. Please contact <a className="underline" href="https://www.medicare.gov/" target="_blank" rel="noreferrer">Medicare.gov</a> or 1-800-MEDICARE to get information on all your options.
+          We do not offer every plan available in your area. Any information we provide is limited to the plans we do offer in your area. Please contact{" "}
+          <a className="underline" href="https://www.medicare.gov/" target="_blank" rel="noreferrer">Medicare.gov</a> or 1-800-MEDICARE to get information on all your options.
         </div>
         <div className="text-xs mt-4">
           <a href="#privacy" className="underline text-indigo-200 hover:text-white">Privacy Policy</a>
         </div>
       </footer>
 
-      {/* Privacy Policy Section */}
+      {/* Privacy Policy */}
       <section id="privacy" className="max-w-4xl mx-auto px-4 py-10 text-xs text-slate-600">
         <h2 className="text-base font-semibold mb-2 text-indigo-700">Privacy Policy</h2>
-        <p className="mb-2">Your privacy is important to us. We only collect information you provide voluntarily through our forms or calendar booking. This data is used solely for scheduling and providing insurance consultations.</p>
-        <p>We never sell or share your personal data. You may request deletion of your information at any time by contacting <a href="mailto:info@ansariinsurancegroup.com" className="underline text-indigo-600">info@ansariinsurancegroup.com</a>.</p>
+        <p className="mb-2">
+          Your privacy is important to us. We only collect information you provide voluntarily through our forms or calendar booking. This data is used solely for scheduling and providing insurance consultations.
+        </p>
+        <p>
+          We never sell or share your personal data. You may request deletion of your information at any time by contacting{" "}
+          <a href="mailto:ansari.mgis@gmail.com" className="underline text-indigo-600">ansari.mgis@gmail.com</a>.
+        </p>
       </section>
     </div>
   );
