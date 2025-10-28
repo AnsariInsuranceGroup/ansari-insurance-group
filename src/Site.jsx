@@ -104,7 +104,7 @@ export default function Site() {
                 e.preventDefault();
                 const data = new FormData(e.currentTarget);
                 const body = `Lead from website\n\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nZIP: ${data.get("zip")}\nNotes: ${data.get("notes")}`;
-                window.location.href = `mailto:ansari.mgis@gmail.com?subject=${encodeURIComponent("New Lead — Ansari Insurance Group")}&body=${encodeURIComponent(body)}`;
+                window.location.href = `mailto:info@ansariinsurancegroup.com?subject=${encodeURIComponent("New Lead — Ansari Insurance Group")}&body=${encodeURIComponent(body)}`;
               }}
             >
               <input name="name" required placeholder="Full Name" className="rounded-lg border border-slate-300 px-3 py-2 text-sm" />
@@ -171,7 +171,7 @@ export default function Site() {
         </p>
         <p>
           We never sell or share your personal data. You may request deletion of your information at any time by contacting{" "}
-          <a href="mailto:ansari.mgis@gmail.com" className="underline text-indigo-600">ansari.mgis@gmail.com</a>.
+          <a href="mailto:info@ansariinsurancegroup.com" className="underline text-indigo-600">info@ansariinsurancegroup.com</a>.
         </p>
       </section>
     </div>
