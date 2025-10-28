@@ -67,11 +67,7 @@ export default function Site() {
       </section>
 
       {/* Services */}
-      <section id="services" className="mx-auto max-w-6xl px-4 py-20 bg-white">
-        <h2 className="text-3xl font-semibold mb-4 text-center text-indigo-700 border-b-2 border-indigo-200 inline-block">Our Services</h2>
-        <p className="text-slate-600 mb-8 text-center max-w-2xl mx-auto">Comprehensive coverage options focusing on Medicare Advantage and more.</p>
-        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {[
     "Medicare Advantage (Part C)",
     "Medicare Supplement (Medigap)",
@@ -89,8 +85,6 @@ export default function Site() {
   ))}
 </ul>
 
-        </ul>
-      </section>
 
       {/* Booking and Lead Form */}
       <section id="book" className="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 py-20 border-t border-slate-200">
