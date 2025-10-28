@@ -71,23 +71,24 @@ export default function Site() {
         <h2 className="text-3xl font-semibold mb-4 text-center text-indigo-700 border-b-2 border-indigo-200 inline-block">Our Services</h2>
         <p className="text-slate-600 mb-8 text-center max-w-2xl mx-auto">Comprehensive coverage options focusing on Medicare Advantage and more.</p>
         <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-{[
-  'Medicare Advantage (Part C)',
-  'Medicare Supplement (Medigap)',
-  'Prescription Drug Plans (Part D)',
-  'Life Insurance',
-  'Annuities',
-  'Health, Dental & Vision'
-].map((item, i) => (
-  <li
-    key={i}
-    className="rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition bg-gradient-to-br from-white to-indigo-50/30"
-  >
-    {item}
-  </li>
-))}
-            <li key={i} className="rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition bg-gradient-to-br from-white to-indigo-50/30">{item}</li>
-          ))}
+<ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {[
+    "Medicare Advantage (Part C)",
+    "Medicare Supplement (Medigap)",
+    "Prescription Drug Plans (Part D)",
+    "Life Insurance",
+    "Annuities",
+    "Health, Dental & Vision"
+  ].map((item, i) => (
+    <li
+      key={i}
+      className="rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition bg-gradient-to-br from-white to-indigo-50/30"
+    >
+      {item}
+    </li>
+  ))}
+</ul>
+
         </ul>
       </section>
 
