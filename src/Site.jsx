@@ -137,6 +137,7 @@ export default function Site() {
           more.
         </p>
 
+        {/* THIS IS THE IMPORTANT FIXED PART */}
         <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             "Medicare Advantage (Part C)",
