@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Site() {
   return (
     <div className="min-h-screen bg-white text-slate-800">
@@ -53,14 +55,14 @@ export default function Site() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Background Gradient + Shape */}
+        {/* Background */}
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-50 via-indigo-100 to-blue-50" />
         <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-b from-indigo-200/60 to-indigo-50 clip-path-[polygon(30%_0,100%_0,100%_100%,0_100%)] hidden md:block" />
 
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
-              Your Medicare Experts Across the PNW —
+              Your Medicare Experts Across the PNW —{" "}
               <span className="block text-indigo-700 mt-1">
                 Clear Guidance. Better Benefits.
               </span>
@@ -99,7 +101,7 @@ export default function Site() {
             </div>
           </div>
 
-          {/* Visual Side Graphic */}
+          {/* Visual card */}
           <div className="relative hidden md:flex items-center justify-center">
             <div className="relative w-full max-w-md rounded-3xl shadow-lg overflow-hidden ring-1 ring-slate-200">
               <img
@@ -131,13 +133,11 @@ export default function Site() {
         <h2 className="text-3xl font-semibold mb-4 text-center text-indigo-700 border-b-2 border-indigo-200 inline-block">
           Our Services
         </h2>
-
         <p className="text-slate-600 mb-8 text-center max-w-2xl mx-auto">
           Comprehensive coverage options focusing on Medicare Advantage and
           more.
         </p>
 
-        {/* THIS IS THE IMPORTANT FIXED PART */}
         <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             "Medicare Advantage (Part C)",
@@ -145,7 +145,7 @@ export default function Site() {
             "Prescription Drug Plans (Part D)",
             "Life Insurance",
             "Annuities",
-            "Health, Dental & Vision"
+            "Health, Dental & Vision",
           ].map((item, i) => (
             <li
               key={i}
@@ -157,12 +157,13 @@ export default function Site() {
         </ul>
       </section>
 
-      {/* Booking and Lead Form */}
+      {/* Booking + Lead Form */}
       <section
         id="book"
         className="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 py-20 border-t border-slate-200"
       >
         <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
+          {/* Calendly */}
           <div className="bg-white rounded-2xl shadow-md p-6 border border-slate-200">
             <h2 className="text-2xl font-semibold mb-4 text-indigo-700">
               Book an Appointment
@@ -170,13 +171,15 @@ export default function Site() {
             <p className="text-slate-600 mb-4">
               Use our calendar or form to schedule your free consultation.
             </p>
-
+            {/* Calendly embed */}
             <iframe
               src="https://calendly.com/ansariinsurancegroup/consultation"
               className="w-full h-[500px] rounded-xl border border-slate-300"
+              title="Schedule a consultation"
             ></iframe>
           </div>
 
+          {/* Lead form */}
           <div
             id="contact"
             className="bg-white rounded-2xl shadow-md p-6 border border-slate-200"
@@ -184,7 +187,6 @@ export default function Site() {
             <h3 className="text-xl font-semibold mb-3 text-indigo-700">
               Request a Call Back
             </h3>
-
             <form
               className="grid grid-cols-1 gap-4"
               onSubmit={(e) => {
@@ -250,20 +252,20 @@ export default function Site() {
           {[
             {
               q: "What is Medicare Advantage?",
-              a: "It combines Part A and Part B, often including drug coverage and extras like dental or vision."
+              a: "It combines Part A and Part B, often including drug coverage and extras like dental or vision.",
             },
             {
               q: "Do you charge for help?",
-              a: "No, consultations are free; carriers pay us if you enroll."
+              a: "No, consultations are free; carriers pay us if you enroll.",
             },
             {
               q: "Can I keep my doctors?",
-              a: "We check your plan’s network and confirm your providers."
+              a: "We check your plan’s network and confirm your providers.",
             },
             {
               q: "What states do you serve?",
-              a: "We are licensed in Oregon, Washington (including Vancouver), Arizona, and California."
-            }
+              a: "We are licensed in Oregon, Washington (including Vancouver), Arizona, and California.",
+            },
           ].map((f, i) => (
             <details
               key={i}
@@ -311,7 +313,7 @@ export default function Site() {
         </div>
       </footer>
 
-      {/* Privacy Policy Section */}
+      {/* Privacy Policy */}
       <section
         id="privacy"
         className="max-w-4xl mx-auto px-4 py-10 text-xs text-slate-600"
