@@ -1,343 +1,330 @@
 import React from "react";
+import logoAIG from "./logo-aig.svg";
 
 export default function Site() {
   return (
-    <div className="min-h-screen bg-white text-slate-800">
-      {/* Top Bar */}
-      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200 shadow-sm">
-        <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+    <div className="bg-slate-50 text-slate-900 antialiased flex min-h-screen flex-col">
+      {/* ===== HEADER ===== */}
+      <header className="sticky top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:py-4">
+          {/* Left: Logo + brand */}
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-lg bg-indigo-600 shadow-md" />
+            {/* Purple AIG square */}
+            <div className="shrink-0">
+              <img
+                src={logoAIG}
+                alt="AIG logo"
+                className="h-9 w-9 rounded-lg shadow-[0_8px_24px_rgba(0,0,0,0.07)]"
+              />
+            </div>
+
+            {/* Brand text */}
             <div className="leading-tight">
-              <div className="text-xl font-semibold tracking-tight text-indigo-700">
+              <div className="text-sm font-semibold text-slate-900">
                 Ansari Insurance Group
               </div>
-              <div className="text-xs text-slate-500">
-                Medicare • Life • Annuities • Health
+              <div className="text-[11px] font-medium text-slate-500 -mt-0.5">
+                Medicare • Life • Dental • Vision
               </div>
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#services" className="hover:text-indigo-700">
-              Services
+          {/* Center nav (desktop) */}
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
+            <a
+              href="#plans"
+              className="hover:text-slate-900 transition-colors"
+            >
+              Plans
             </a>
-            <a href="#why" className="hover:text-indigo-700">
-              Why Us
+            <a
+              href="#benefits"
+              className="hover:text-slate-900 transition-colors"
+            >
+              Benefits
             </a>
-            <a href="#book" className="hover:text-indigo-700">
-              Book
+            <a
+              href="#about"
+              className="hover:text-slate-900 transition-colors"
+            >
+              About
             </a>
-            <a href="#faq" className="hover:text-indigo-700">
-              FAQ
-            </a>
-            <a href="#contact" className="hover:text-indigo-700">
+            <a
+              href="#contact"
+              className="hover:text-slate-900 transition-colors"
+            >
               Contact
             </a>
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
+          {/* Right CTA */}
+          <div className="flex items-center">
             <a
               href="tel:14252479415"
-              className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-indigo-50"
+              className="inline-flex items-center rounded-xl bg-[#6D28D9] px-3 py-2 text-xs font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.07)] hover:opacity-90 active:opacity-80 md:text-sm md:px-4 md:py-2.5"
             >
-              Call: 425-247-9415
-            </a>
-            <a
-              href="#book"
-              className="rounded-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 text-sm font-semibold shadow"
-            >
-              Schedule
+              Call / Text 425-247-9415
             </a>
           </div>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-50 via-indigo-100 to-blue-50" />
-        <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-b from-indigo-200/60 to-indigo-50 clip-path-[polygon(30%_0,100%_0,100%_100%,0_100%)] hidden md:block" />
+      {/* push page down so content isn't hiding under sticky header */}
+      <main className="flex-1 pt-[0px]">
+        {/* ===== HERO ===== */}
+        <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="inline-block rounded-full bg-white px-3 py-1 text-[11px] font-medium text-[#6D28D9] shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200">
+              No-cost Medicare review
+            </div>
 
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
-              Your Medicare Experts Across the PNW —{" "}
-              <span className="block text-indigo-700 mt-1">
-                Clear Guidance. Better Benefits.
-              </span>
+            <h1 className="mt-6 text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
+              Guiding you through Medicare
+              <br className="hidden sm:block" />
+              <span className="text-[#6D28D9]"> with Care and Clarity.</span>
             </h1>
 
-            <p className="mt-4 text-base md:text-lg text-slate-600 max-w-md">
-              A friendly team helping residents across{" "}
-              <span className="font-medium">
-                Oregon, Washington (including Vancouver), Arizona, and
-                California
-              </span>{" "}
-              compare{" "}
-              <span className="font-medium">Medicare Advantage</span> plans —
-              plus Medigap, Part D, Life, Annuities &amp; Health. No-cost
-              consultations. No pressure.
+            <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-slate-600 md:text-lg">
+              Medicare Advantage, Supplements, Prescription (Part D), Dental,
+              Vision, and even extra benefits like OTC allowances — explained
+              in plain English (and Farsi if you prefer).
             </p>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a
-                href="#book"
-                className="inline-flex justify-center rounded-xl bg-indigo-600 hover:bg-indigo-700 px-6 py-3 text-white font-semibold shadow-md transition"
-              >
-                Schedule a Free Consultation
-              </a>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <a
                 href="tel:14252479415"
-                className="inline-flex justify-center rounded-xl border border-slate-300 hover:border-indigo-500 px-6 py-3 font-semibold shadow-sm transition"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-[#6D28D9] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.07)] hover:opacity-90 active:opacity-80 sm:w-auto"
               >
-                Call 425-247-9415
+                Call / Text 425-247-9415
+              </a>
+
+              <a
+                href="#contact"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200 hover:bg-slate-50 sm:w-auto"
+              >
+                Book a quick consult
               </a>
             </div>
 
-            <div className="mt-4 text-xs text-slate-500">
-              Not connected with or endorsed by the U.S. government or the
-              federal Medicare program.
+            <div className="mt-6 text-[11px] text-slate-500">
+              Licensed independent agent • Local help • No obligation
             </div>
           </div>
+        </section>
 
-          {/* Visual card */}
-          <div className="relative hidden md:flex items-center justify-center">
-            <div className="relative w-full max-w-md rounded-3xl shadow-lg overflow-hidden ring-1 ring-slate-200">
-              <img
-                src="https://images.unsplash.com/photo-1605902711622-cfb43c4437f1?auto=format&fit=crop&w=800&q=80"
-                alt="Senior couple with advisor"
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 bg-indigo-600/10" />
+        {/* ===== PLANS SECTION ===== */}
+        <section
+          id="plans"
+          className="bg-white/60 border-y border-slate-200/70 backdrop-blur-sm"
+        >
+          <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="text-center text-2xl font-semibold text-slate-900 md:text-3xl">
+                Which plan actually fits you?
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-center text-slate-600 text-base leading-relaxed">
+                Everyone’s situation is different. I help you compare Medicare
+                Advantage, Medicare Supplement (Medigap), and Prescription Drug
+                Plans — side by side — based on your doctors, your prescriptions,
+                and your budget.
+              </p>
+
+              <div className="mt-10 grid gap-6 sm:grid-cols-2">
+                {/* Card 1 */}
+                <div className="rounded-2xl bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200">
+                  <div className="text-sm font-semibold text-[#6D28D9]">
+                    Medicare Advantage (Part C)
+                  </div>
+                  <div className="mt-2 text-base font-semibold text-slate-900">
+                    $0 premium plans may include extras
+                  </div>
+                  <ul className="mt-3 text-sm leading-relaxed text-slate-600 space-y-2">
+                    <li>• OTC / grocery allowance</li>
+                    <li>• Dental / vision / hearing</li>
+                    <li>• Gym, rides, more</li>
+                  </ul>
+                </div>
+
+                {/* Card 2 */}
+                <div className="rounded-2xl bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200">
+                  <div className="text-sm font-semibold text-[#6D28D9]">
+                    Medicare Supplement (Medigap)
+                  </div>
+                  <div className="mt-2 text-base font-semibold text-slate-900">
+                    Predictable out-of-pocket costs
+                  </div>
+                  <ul className="mt-3 text-sm leading-relaxed text-slate-600 space-y-2">
+                    <li>• Keep Original Medicare</li>
+                    <li>• Lower surprise bills</li>
+                    <li>• Usually see any provider who takes Medicare</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== EXTRA BENEFITS ===== */}
+        <section id="benefits" className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl text-center">
+              Want the extras?
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-center text-slate-600 text-base leading-relaxed">
+              Some plans give you more than just medical coverage. If you
+              qualify, you could get things like OTC money, transportation to
+              appointments, flex cards, dental/vision credit, etc.
+            </p>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <div className="rounded-xl bg-white p-5 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200">
+                <div className="text-sm font-semibold text-slate-900">
+                  OTC Allowance
+                </div>
+                <div className="mt-1 text-xs text-slate-600 leading-relaxed">
+                  Money every quarter for health items like vitamins, cold meds,
+                  bandages, etc.
+                </div>
+              </div>
+
+              <div className="rounded-xl bg-white p-5 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200">
+                <div className="text-sm font-semibold text-slate-900">
+                  Dental / Vision / Hearing
+                </div>
+                <div className="mt-1 text-xs text-slate-600 leading-relaxed">
+                  Cleanings, glasses, hearing aids depending on the plan.
+                </div>
+              </div>
+
+              <div className="rounded-xl bg-white p-5 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200">
+                <div className="text-sm font-semibold text-slate-900">
+                  Transportation &amp; More
+                </div>
+                <div className="mt-1 text-xs text-slate-600 leading-relaxed">
+                  Rides to medical visits, gym memberships, and more.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== ABOUT ===== */}
+        <section
+          id="about"
+          className="bg-white/60 border-y border-slate-200/70 backdrop-blur-sm"
+        >
+          <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">
+                Real help. Not a call center.
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+                I’m an independent licensed agent. That means I can walk you
+                through options from multiple companies — and I’ll tell you what
+                you actually qualify for, not just what sounds good in a TV ad.
+                I’ll also help in Farsi if that’s easier for you or family.
+              </p>
+
+              <div className="mt-8 inline-block rounded-xl bg-white px-4 py-3 text-left shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200">
+                <div className="text-xs font-semibold text-slate-900">
+                  Quick promise:
+                </div>
+                <div className="text-xs text-slate-600 leading-relaxed">
+                  Your doctors, your meds, your budget come first. If I can’t
+                  make it better, I’ll say that.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== CONTACT ===== */}
+        <section
+          id="contact"
+          className="max-w-7xl mx-auto px-4 py-16 md:py-24"
+        >
+          <div className="mx-auto max-w-xl text-center">
+            <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">
+              Let’s look at your options
+            </h2>
+
+            <p className="mt-3 text-base leading-relaxed text-slate-600 md:text-lg">
+              Call, text, or send a quick message. I’ll check doctors,
+              prescriptions, and benefits — and tell you what you’re actually
+              eligible for.
+            </p>
+
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+              <a
+                href="tel:14252479415"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-[#6D28D9] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.07)] hover:opacity-90 active:opacity-80 sm:w-auto"
+              >
+                Call / Text 425-247-9415
+              </a>
+
+              <a
+                href="mailto:ansari.mgis@gmail.com"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200 hover:bg-slate-50 sm:w-auto"
+              >
+                Email: ansari.mgis@gmail.com
+              </a>
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-white border border-indigo-100 rounded-xl shadow p-4 text-sm text-slate-600 w-60">
-              <strong className="text-indigo-700">
-                Licensed Across OR, WA, AZ, &amp; CA
-              </strong>
-              <p className="mt-1 text-xs">
-                Your trusted Medicare &amp; Life Insurance team serving the
-                Pacific Northwest and beyond.
+            <div className="mt-6 text-[11px] text-slate-500 leading-relaxed">
+              Zero cost. Zero obligation. You don’t sign anything unless you
+              want to enroll.
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* ===== FOOTER / DISCLAIMER ===== */}
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+          <div className="grid gap-8 md:grid-cols-3 text-sm text-slate-600">
+            <div className="space-y-2">
+              <div className="text-slate-900 font-semibold text-base">
+                Ansari Insurance Group
+              </div>
+              <div className="text-slate-500 text-xs leading-relaxed">
+                Guiding you through Medicare with Care and Clarity.
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <div className="text-slate-900 font-semibold text-base">
+                Contact
+              </div>
+              <div className="text-xs leading-relaxed">
+                Call / Text: 425-247-9415
+                <br />
+                Email: ansari.mgis@gmail.com
+              </div>
+            </div>
+
+            <div className="space-y-2 text-xs leading-relaxed">
+              <div className="text-slate-900 font-semibold text-base">
+                Medicare Disclaimer
+              </div>
+              <p className="text-slate-500">
+                We do not offer every plan available in your area. Any
+                information we provide is limited to the plans we do offer in
+                your area. Please contact Medicare.gov or 1-800-MEDICARE to get
+                information on all your options.
+              </p>
+              <p className="text-slate-400">
+                Not connected with or endorsed by the United States government
+                or the federal Medicare program.
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Services */}
-      <section
-        id="services"
-        className="mx-auto max-w-6xl px-4 py-20 bg-white"
-      >
-        <h2 className="text-3xl font-semibold mb-4 text-center text-indigo-700 border-b-2 border-indigo-200 inline-block">
-          Our Services
-        </h2>
-        <p className="text-slate-600 mb-8 text-center max-w-2xl mx-auto">
-          Comprehensive coverage options focusing on Medicare Advantage and
-          more.
-        </p>
-
-        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            "Medicare Advantage (Part C)",
-            "Medicare Supplement (Medigap)",
-            "Prescription Drug Plans (Part D)",
-            "Life Insurance",
-            "Annuities",
-            "Health, Dental & Vision",
-          ].map((item, i) => (
-            <li
-              key={i}
-              className="rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition bg-gradient-to-br from-white to-indigo-50/30"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Booking + Lead Form */}
-      <section
-        id="book"
-        className="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 py-20 border-t border-slate-200"
-      >
-        <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
-          {/* Calendly */}
-          <div className="bg-white rounded-2xl shadow-md p-6 border border-slate-200">
-            <h2 className="text-2xl font-semibold mb-4 text-indigo-700">
-              Book an Appointment
-            </h2>
-            <p className="text-slate-600 mb-4">
-              Use our calendar or form to schedule your free consultation.
-            </p>
-            {/* Calendly embed */}
-            <iframe
-              src="https://calendly.com/ansariinsurancegroup/consultation"
-              className="w-full h-[500px] rounded-xl border border-slate-300"
-              title="Schedule a consultation"
-            ></iframe>
+          <div className="mt-12 text-[11px] text-slate-400 text-center">
+            © {new Date().getFullYear()} Ansari Insurance Group. All rights
+            reserved.
           </div>
-
-          {/* Lead form */}
-          <div
-            id="contact"
-            className="bg-white rounded-2xl shadow-md p-6 border border-slate-200"
-          >
-            <h3 className="text-xl font-semibold mb-3 text-indigo-700">
-              Request a Call Back
-            </h3>
-            <form
-              className="grid grid-cols-1 gap-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const data = new FormData(e.currentTarget);
-                const body = `Lead from website\n\nName: ${data.get(
-                  "name"
-                )}\nPhone: ${data.get("phone")}\nEmail: ${data.get(
-                  "email"
-                )}\nZIP: ${data.get("zip")}\nNotes: ${data.get("notes")}`;
-                window.location.href = `mailto:info@ansariinsurancegroup.com?subject=${encodeURIComponent(
-                  "New Lead — Ansari Insurance Group"
-                )}&body=${encodeURIComponent(body)}`;
-              }}
-            >
-              <input
-                name="name"
-                required
-                placeholder="Full Name"
-                className="rounded-lg border border-slate-300 px-3 py-2 text-sm"
-              />
-              <input
-                name="phone"
-                required
-                placeholder="Phone Number"
-                className="rounded-lg border border-slate-300 px-3 py-2 text-sm"
-              />
-              <input
-                name="email"
-                placeholder="Email"
-                type="email"
-                className="rounded-lg border border-slate-300 px-3 py-2 text-sm"
-              />
-              <input
-                name="zip"
-                placeholder="ZIP Code"
-                className="rounded-lg border border-slate-300 px-3 py-2 text-sm"
-              />
-              <textarea
-                name="notes"
-                rows={3}
-                placeholder="Questions or details..."
-                className="rounded-lg border border-slate-300 px-3 py-2 text-sm"
-              />
-              <button
-                type="submit"
-                className="rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 text-sm font-semibold shadow-md transition"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" className="max-w-6xl mx-auto px-4 py-20">
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700 border-b-2 border-indigo-200 inline-block">
-          Frequently Asked Questions
-        </h2>
-
-        <div className="mt-8 grid md:grid-cols-2 gap-6">
-          {[
-            {
-              q: "What is Medicare Advantage?",
-              a: "It combines Part A and Part B, often including drug coverage and extras like dental or vision.",
-            },
-            {
-              q: "Do you charge for help?",
-              a: "No, consultations are free; carriers pay us if you enroll.",
-            },
-            {
-              q: "Can I keep my doctors?",
-              a: "We check your plan’s network and confirm your providers.",
-            },
-            {
-              q: "What states do you serve?",
-              a: "We are licensed in Oregon, Washington (including Vancouver), Arizona, and California.",
-            },
-          ].map((f, i) => (
-            <details
-              key={i}
-              className="group bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition"
-            >
-              <summary className="cursor-pointer select-none px-5 py-4 font-medium text-slate-800 flex justify-between items-center">
-                {f.q}
-                <span className="text-indigo-600">▾</span>
-              </summary>
-              <div className="bg-indigo-50 px-5 py-4 text-sm text-slate-600">
-                {f.a}
-              </div>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gradient-to-r from-indigo-700 to-indigo-600 text-white py-10 text-sm text-center">
-        <div>
-          © {new Date().getFullYear()} Ansari Insurance Group — Licensed in OR,
-          WA, AZ, and CA.
-        </div>
-        <div className="text-xs mt-2 max-w-3xl mx-auto opacity-90">
-          We do not offer every plan available in your area. Any information we
-          provide is limited to the plans we do offer in your area. Please
-          contact{" "}
-          <a
-            className="underline"
-            href="https://www.medicare.gov/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Medicare.gov
-          </a>{" "}
-          or 1-800-MEDICARE to get information on all your options.
-        </div>
-        <div className="text-xs mt-4">
-          <a
-            href="#privacy"
-            className="underline text-indigo-200 hover:text-white"
-          >
-            Privacy Policy
-          </a>
         </div>
       </footer>
-
-      {/* Privacy Policy */}
-      <section
-        id="privacy"
-        className="max-w-4xl mx-auto px-4 py-10 text-xs text-slate-600"
-      >
-        <h2 className="text-base font-semibold mb-2 text-indigo-700">
-          Privacy Policy
-        </h2>
-        <p className="mb-2">
-          Your privacy is important to us. We only collect information you
-          provide voluntarily through our forms or calendar booking. This data
-          is used solely for scheduling and providing insurance consultations.
-        </p>
-        <p>
-          We never sell or share your personal data. You may request deletion of
-          your information at any time by contacting{" "}
-          <a
-            href="mailto:info@ansariinsurancegroup.com"
-            className="underline text-indigo-600"
-          >
-            info@ansariinsurancegroup.com
-          </a>
-          .
-        </p>
-      </section>
     </div>
   );
 }
