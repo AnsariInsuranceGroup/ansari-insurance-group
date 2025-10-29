@@ -280,7 +280,7 @@ export default function Site() {
               <div className="mt-4 w-full rounded-xl bg-white shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200 p-4">
                 <iframe
                   title="Book a call with Ansari Insurance Group"
-                  src="https://calendly.com/ansariinsurancegroup/consult"
+                  src="https://calendly.com/ansariinsurancegroup-info/30min"
                   className="w-full"
                   style={{
                     minHeight: "600px",
