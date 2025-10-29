@@ -87,7 +87,8 @@ export default function Site() {
             <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-slate-600 md:text-lg">
               Medicare Advantage, Supplements, Prescription (Part D), Dental,
               Vision, and even extra benefits like OTC allowances — explained
-              in plain English (and Farsi if you prefer).
+              in plain English (and Farsi if you or your family prefer) by our
+              licensed team.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
@@ -102,12 +103,12 @@ export default function Site() {
                 href="#contact"
                 className="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200 hover:bg-slate-50 sm:w-auto"
               >
-                Book a quick consult
+                Book with our team
               </a>
             </div>
 
             <div className="mt-6 text-[11px] text-slate-500">
-              Licensed independent agent • Local help • No obligation
+              Licensed independent agents • Local help • No obligation
             </div>
           </div>
         </section>
@@ -123,10 +124,10 @@ export default function Site() {
                 Which plan actually fits you?
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-center text-slate-600 text-base leading-relaxed">
-                Everyone’s situation is different. I help you compare Medicare
-                Advantage, Medicare Supplement (Medigap), and Prescription Drug
-                Plans — side by side — based on your doctors, your prescriptions,
-                and your budget.
+                Everyone’s situation is different. Our team helps you compare
+                Medicare Advantage, Medicare Supplement (Medigap), and
+                Prescription Drug Plans — side by side — based on your doctors,
+                your prescriptions, and your budget.
               </p>
 
               <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -219,26 +220,27 @@ export default function Site() {
                 Real help. Not a call center.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
-                I’m an independent licensed agent. That means I can walk you
-                through options from multiple companies — and I’ll tell you what
-                you actually qualify for, not just what sounds good in a TV ad.
-                I’ll also help in Farsi if that’s easier for you or family.
+                We’re independent licensed agents. That means we walk you
+                through options from multiple companies — and we’ll tell you
+                what you actually qualify for, not just what sounds good in a TV
+                ad. We can also help in Farsi if that’s easier for you or your
+                family.
               </p>
 
               <div className="mt-8 inline-block rounded-xl bg-white px-4 py-3 text-left shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200">
                 <div className="text-xs font-semibold text-slate-900">
-                  Quick promise:
+                  Our promise:
                 </div>
                 <div className="text-xs text-slate-600 leading-relaxed">
-                  Your doctors, your meds, your budget come first. If I can’t
-                  make it better, I’ll say that.
+                  Your doctors, your meds, your budget come first. If we can’t
+                  improve your situation, we’ll tell you that.
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ===== CONTACT ===== */}
+        {/* ===== CONTACT / BOOKING ===== */}
         <section
           id="contact"
           className="max-w-7xl mx-auto px-4 py-16 md:py-24"
@@ -249,9 +251,9 @@ export default function Site() {
             </h2>
 
             <p className="mt-3 text-base leading-relaxed text-slate-600 md:text-lg">
-              Call, text, or send a quick message. I’ll check doctors,
-              prescriptions, and benefits — and tell you what you’re actually
-              eligible for.
+              Call, text, or schedule a time. Our team will review your doctors,
+              prescriptions, and available benefits — and let you know what
+              you’re actually eligible for.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
@@ -263,14 +265,32 @@ export default function Site() {
               </a>
 
               <a
-                href="mailto:ansari.mgis@gmail.com"
+                href="mailto:info@ansariinsurancegroup.com"
                 className="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200 hover:bg-slate-50 sm:w-auto"
               >
-                Email: ansari.mgis@gmail.com
+                info@ansariinsurancegroup.com
               </a>
             </div>
 
-            <div className="mt-6 text-[11px] text-slate-500 leading-relaxed">
+            {/* Calendly embed */}
+            <div className="mt-10 text-left">
+              <div className="text-sm font-semibold text-slate-900 text-center">
+                Or book a meeting with our team:
+              </div>
+              <div className="mt-4 w-full rounded-xl bg-white shadow-[0_8px_24px_rgba(0,0,0,0.07)] ring-1 ring-slate-200 p-4">
+                <iframe
+                  title="Book a call with Ansari Insurance Group"
+                  src="https://calendly.com/ansariinsurancegroup/consult"
+                  className="w-full"
+                  style={{
+                    minHeight: "600px",
+                    border: "0",
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className="mt-6 text-[11px] text-slate-500 leading-relaxed text-center">
               Zero cost. Zero obligation. You don’t sign anything unless you
               want to enroll.
             </div>
@@ -298,7 +318,7 @@ export default function Site() {
               <div className="text-xs leading-relaxed">
                 Call / Text: 425-247-9415
                 <br />
-                Email: ansari.mgis@gmail.com
+                Email: info@ansariinsurancegroup.com
               </div>
             </div>
 
