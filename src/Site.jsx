@@ -5,7 +5,7 @@ export default function Site() {
   return (
     <div className="bg-slate-50 text-slate-900 antialiased flex min-h-screen flex-col">
       {/* ===== HEADER ===== */}
-      <header className="sticky top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:py-4">
           {/* Left: Logo + brand */}
           <div className="flex items-center gap-3">
@@ -69,8 +69,8 @@ export default function Site() {
         </div>
       </header>
 
-      {/* push page down so content isn't hiding under sticky header */}
-      <main className="flex-1 pt-[0px]">
+      {/* page content pushed down so it doesn't sit under fixed header */}
+      <main className="flex-1 pt-[80px]">
         {/* ===== HERO ===== */}
         <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
